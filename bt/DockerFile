@@ -1,0 +1,11 @@
+FROM centos
+MAINTAINER MJCZZ
+ENV MYPATH /www
+WORKDIR $MYPATH
+RUN yum -y install vim
+RUN yum -y install net-tools
+RUN yum -y install wget
+EXPOSE 80
+CMD echo $MYPATH
+CMD echo "success-----ok"
+CMD /bin/bash
